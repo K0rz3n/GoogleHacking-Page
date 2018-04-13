@@ -248,19 +248,24 @@ inurl:index.php.bak
 
 
 ### 四、文档细分
+
 google 只搜索做过语法分析的或者是可见的一个文档视图
 google 并不会搜索文档的元数据或者叫做域值（就是文件内部的一些属性），这些值只能你自己把文档下载下来右键查看
 
 **一、配置文件**
-配置文件存放程序的设置信息，攻击者或者是安全专家能通过这些文件洞察程序的使用情况，正在运行的系统的信息以及网络的使用和配置情况
 
+配置文件存放程序的设置信息，攻击者或者是安全专家能通过这些文件洞察程序的使用情况，正在运行的系统的信息以及网络的使用和配置情况
 不管配置文件的数据类型，一个配置文件本身的存在就很说明问题，配置文件的存在说明服务就在附近
+
 **实例：**
 filetype:conf inurl:firewall
 
 **注意：**
+
 1.配置文件名conf的使用，也可以组合其他的通用的命名规则来查找其他等价的命名规则
-例如：
+
+**例如：**
+
 inurl:conf OR inurl:config OR inurl:cfg
 
 2.如果你能知道配置文件的名字也是一个非常好的搜索方式，当然你可以从配置文件中抽取特定的字符串来查询
@@ -268,6 +273,7 @@ inurl:conf OR inurl:config OR inurl:cfg
 3.如果能再配上软件名字的话就效果更好了
 
 **考虑的点:**
+
 1.使用配置文件中独一无二的单词或者短语
 2.过滤掉单词 sample example test how to tutorial来过滤示例文件
 3.用 -cvs 来过滤到CVS库，里面经常存放默认的配置文件
@@ -276,14 +282,17 @@ inurl:conf OR inurl:config OR inurl:cfg
 
 
 **二、查找文件**
+
 日志文件中也记录着很多的敏感信息
 日志文件也有一个默认的名字可以被我们用作基础的搜索，最常见的扩展名就是log了
+
 **实例：**
 filetype:log inurl:log 
 ext:log log 
 filetype:log username putty
 
 **三、office文档**
+
 **实例：**
 filetype:xls inurl:password.xls
 filetype:xls username password email
@@ -301,23 +310,29 @@ filetype:xls username password email
 使用mysql_connect 函数的php脚本泄露的信息几乎是全部的，但是inc扩展名使之成为了一个includefile
 
 **三、错误消息**
+
 数据库的错误消息能够用来分析操作系统和web服务器的版本
 还可能更多
 SQL command not properly ended 
 这个表示没有在sql语句的最后找到正确的终止符，所以可能会被用于注入攻击
 
 **四、数据库的转储**
+
 数据库基于文本的转换在网络上是很常见的，使用数据库的转储数据库管理员能完整地重建数据库，也就意味着一个完整的转储的细节并不只是数据表格的结构还有每张表的每一条记录。
 攻击者可以搜索转储的标题 
 `# Dumping data for table`
 并且通过执行必要的关键词 username password等能够缩小范围
 `# Dumping data for table(user|username|password|pass)`
 还可以关注一些由别的工具添加到数据库转储中最后的文件名
+
 **实例：**
+
 filetype:sql sql 
 
 **五、真实的数据库文件**
+
 攻击者还能直接搜索到数据库本身，并不适合所有的数据库系统，只适合哪些有着特定名字或者扩展名的数据库,因为是二进制文件，所以没法在里面搜索字符
+
 **实例：**
 filetype:mdb inurl:com
 
