@@ -670,7 +670,7 @@ site:nytimes.com -site:www.nytimes.com
 
 **实例：**
 
-("for more information"|"noot found") (error|warning)
+("for more information"|"not found") (error|warning)
 
 **四、login|logon**
 
