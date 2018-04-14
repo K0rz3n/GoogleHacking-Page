@@ -268,7 +268,7 @@ filetype:log inurl:ws_ftp.log
 
 实例：
 
-intitle:index.of ""server at;
+intitle:index.of "server at"
 
 intitle:index.of "Apache/1.3.27 Server at"
 
