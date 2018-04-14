@@ -172,6 +172,7 @@ numberange 需要两个参数，一个低位数字，一个高位数字，中间
 **注意：**
 
 1.这个运算符还有简化版， 12344..12346
+
 2.可以和其他运算符一起使用
 
 **daterange 搜索在特定日期范围内发布额的页面**
@@ -194,6 +195,7 @@ numberange 需要两个参数，一个低位数字，一个高位数字，中间
 **注意：**
 
 1.使用高级搜索引擎能实现相同的功能
+
 2.不能和其他运算符一起使用
 
 #### define 显示一个术语的定义
@@ -215,8 +217,11 @@ numberange 需要两个参数，一个低位数字，一个高位数字，中间
 **问题：**
 
 1.无法阻止用户下载特定的文件或者访问特定的目录
+
 2.会显示一些服务器的细节
+
 3.不会分辨哪些是公共文件，哪些是后台文件
+
 4.一般是偶然被显示，当顶层索引文件如 index.php消失时
 
 **攻击：**
@@ -229,6 +234,7 @@ intitle:index.of （这里的休止符代表的是单个字母的通配符）
 **更优化的查找**
 实例：
 intitle:index.of "parent directory"
+
 intitle:index.of name size
 
 **2.查找特定的目录**
@@ -236,20 +242,27 @@ intitle:index.of name size
 我们有时候不仅要查找目录列表，还要查找能访问特定目录的目录列表
 实例：
 intitle:index.of.admin
+
 intitle:index.of inurl:admin
 
 **3.查找特定的文件**
 
 我们可以直接在这个目录中搜索敏感文件
+
 实例：
 intitle:index.of ws_ftp.log
+
 filetype:log inurl:ws_ftp.log
 
 **4.服务器版本**
 
 能被攻击者用来决定攻击web服务器最佳方法的一小段信息就是确切的服务器版本，虽然攻击者能直接连接那个服务器的网页端口，并发送http请求来获取版本信息，但是google也可以
+
 实例：
+
+
 intitle:index.of ""server at;
+
 intitle:index.of "Apache/1.3.27 Server at"
 
 **5.操作系统**
@@ -295,6 +308,7 @@ intitle:index.of inurl:"admin"
 经常会出现web页面的备份文件，他们有泄露源码的倾向。
 常常在配置错误的时候出现这种问题，把php代码备份到不是以php结尾的文件中，比如bak
 我们可以
+
 实例：
 intitle:index.of index.php.bak
 inurl:index.php.bak
@@ -333,9 +347,13 @@ inurl:conf OR inurl:config OR inurl:cfg
 **考虑的点:**
 
 1.使用配置文件中独一无二的单词或者短语
+
 2.过滤掉单词 sample example test how to tutorial来过滤示例文件
+
 3.用 -cvs 来过滤到CVS库，里面经常存放默认的配置文件
+
 4.如果你正在搜索一个UNIX的配置文件，过滤掉manpage 或者是Manual
+
 5.在默认配置文件中寻找一个修改域生成查询
 
 
@@ -347,7 +365,9 @@ inurl:conf OR inurl:config OR inurl:cfg
 **实例：**
 
 filetype:log inurl:log 
+
 ext:log log 
+
 filetype:log username putty
 
 **三、office文档**
@@ -355,6 +375,7 @@ filetype:log username putty
 **实例：**
 
 filetype:xls inurl:password.xls
+
 filetype:xls username password email
 
 ### 五、数据库挖掘
@@ -396,6 +417,7 @@ filetype:sql sql
 攻击者还能直接搜索到数据库本身，并不适合所有的数据库系统，只适合哪些有着特定名字或者扩展名的数据库,因为是二进制文件，所以没法在里面搜索字符
 
 **实例：**
+
 filetype:mdb inurl:com
 
 
@@ -404,9 +426,13 @@ filetype:mdb inurl:com
 所有的搜索都遵循几个步骤
 
 1.定义一个原始的搜索项
+
 2.扩展该搜索项
+
 3.从数据源获得数据
+
 4.语义分析该数据
+
 5.把该数据加工成信息
 
 **一、原始搜索项**
@@ -424,14 +450,23 @@ filetype:mdb inurl:com
 当然我们有办法解决
 
 email 地址可以扩展，比如：
+
 qazwsx@k0rz3n.com
+
 qazwsx at k0rz3n.com
+
 qazwsx at k0rz3n dot com
+
 qazwsx@k0rz3n dot com
+
 qazwsx_at_k0rz3n.com
+
 qazwsx_at_k0rz3n dot com
+
 qazwsx_at_k0rz3n_dot_com
+
 qazwsx@k0rz3n.remove.com
+
 qazwsx@_removethis_k0rz3n.com
 
 **注意：**
@@ -443,6 +478,7 @@ qazwsx@_removethis_k0rz3n.com
 **验证一个email的地址**
 
 Linux上使用host 命令 host -t mx.gmail.com
+
 windows上使用nslookup -qutype = mx.gmail.com
 
 **2.电话号码**
@@ -468,6 +504,7 @@ http://cqcounter.com/search/
 
 比如你想找到某个顶级域名中的所有的网站或者email地址，你要完成以下两件事
 ①突破1000个结果的限制
+
 ②增加你每次搜索的结果
 
 **例如：**
