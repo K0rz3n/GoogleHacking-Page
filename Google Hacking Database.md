@@ -146,11 +146,18 @@ site:域名 intext:"人的信息"(|intext:...) (-排除的信息)
 他们是搜索物联网设备的神兵利器，有时间我也可以给大家介绍一下，或者网上也有不少文章简单的介绍了他们，推荐大家阅读
 
 钟馗之眼  https://www.zoomeye.org/
+
+![此处输入图片的描述][4]
+
 shadon    https://www.shodan.io/
+
+![此处输入图片的描述][5]
 
 **注册表信息**
 
 filetype:reg HKEY_CURRENT_USER|(其他注册表文件) （username|其他细节信息）
+
+![此处输入图片的描述][6]
 
 **漏洞扫描器生成的报告**
 
@@ -423,3 +430,6 @@ HKEY_CURRENT_CONFIG
   [1]: http://omjtvvl8z.bkt.clouddn.com/GHDB1.png
   [2]: http://omjtvvl8z.bkt.clouddn.com/GHDB2.png
   [3]: http://omjtvvl8z.bkt.clouddn.com/GHDB3.png
+  [4]: http://omjtvvl8z.bkt.clouddn.com/ZKZY.png
+  [5]: http://omjtvvl8z.bkt.clouddn.com/shadon.png
+  [6]: http://omjtvvl8z.bkt.clouddn.com/ZCB1.png
