@@ -15,40 +15,46 @@
 
 ![此处输入图片的描述][1]
 
+![此处输入图片的描述][2]
+
 **2.谷歌地球**
 
 坐看世界各地，笑看云卷云舒，渗透之前看看渗透的地方长啥样对吧...
 
-![此处输入图片的描述][2]
+![此处输入图片的描述][3]
+
+![此处输入图片的描述][4]
 
 **3.谷歌论坛**
 
 信息收集的重要地点，谷歌背后的繁荣之地（多得是你不知道的事）
 
-![此处输入图片的描述][3]
+![此处输入图片的描述][5]
+
 
 **4.谷歌日历**
 
 记录你生活的点点滴滴，给hacker留下了巨大的财富
 
-![此处输入图片的描述][4]
+![此处输入图片的描述][6]
+
+![此处输入图片的描述][7]
 
 **5.谷歌地图**
 
 找到你回家的路，跑路的重要工具.....
 
-![此处输入图片的描述][5]
+![此处输入图片的描述][8]
 
 **6.谷歌高级搜索**
 
 可以自定义你的搜索，相当的强大
 
-
-![此处输入图片的描述][6]
+![此处输入图片的描述][9]
 
 7.谷歌自定义搜索引擎
 
-![此处输入图片的描述][7]
+![此处输入图片的描述][10]
 
 **7.GHDB 谷歌黑客数据库**
 
@@ -56,7 +62,7 @@ https://www.exploit-db.com/google-hacking-database/
 
 **这一部分我在下面一篇文章中会单独仔细的讲一下**
 
-![此处输入图片的描述][8]
+![此处输入图片的描述][11]
 
 ### 二、搜索基础
 
@@ -95,6 +101,7 @@ https://www.exploit-db.com/google-hacking-database/
 **其他**
 
 1.URL 的第一部分 
+
 www.google.com/search这个是google搜索脚本的位置
 
 2.当你把一个特殊字符包含进你的url的时候，浏览器会帮你使用等价的十六进制编码特殊的字符或者空格
@@ -126,10 +133,13 @@ www.google.com/search这个是google搜索脚本的位置
     insubject
     stocks
     define
+
 **规则**
+
 operator:search_term
 
 **注意点**
+
 1.在操作符、冒号、搜索项之间**没有**空格
 
 2.布尔运算符和特殊字符不能用来冒号的作用
@@ -141,6 +151,7 @@ operator:search_term
 ②allintext 除了在标题、URL、链接以外的任何地方找到某个内容（它后面的每一个单词或者短语都要在内容中出现）
 
 4.intitle:"index of"等价于 intitle:index.of
+
 因为.休止符能够代替任何字符(这个技术也提供了一个无需键入空格和两边引号的短语)
 
 5.intitle:"index of" private 返回标题中有index of 以及在任何地方有 private的页面（intitle只对后面的第一个搜索项有效）
@@ -148,6 +159,7 @@ operator:search_term
 ### 二、常见运算符解释
 
 **site 把搜索精确到特定的网站**
+
 site 允许你搜索仅仅位于一个特定服务器上的或者在一个特定域名里的页面
 
 **注意：**
@@ -179,11 +191,13 @@ inanchor 用于寻找链接的锚点，或者在链接中显示的文本（就�
 **numberange 搜索一个数字**
 
 numberange 需要两个参数，一个低位数字，一个高位数字，中间用连字符分割
+
 为了找到12345  numberange:12344-12346
 
 **注意：**
 
 1.这个运算符还有简化版， 12344..12346
+
 2.可以和其他运算符一起使用
 
 **daterange 搜索在特定日期范围内发布额的页面**
@@ -244,7 +258,7 @@ numberange 需要两个参数，一个低位数字，一个高位数字，中间
 
 intitle:index.of （这里的休止符代表的是单个字母的通配符）
 
-![此处输入图片的描述][9]
+![此处输入图片的描述][12]
 
 **更优化的查找**
 
@@ -284,11 +298,12 @@ intitle:index.of ""server at;
 
 intitle:index.of "Apache/1.3.27 Server at"
 
-![此处输入图片的描述][10]
+![此处输入图片的描述][13]
 
 **5.操作系统**
 
 我们还可以确定服务器的操作系统、模块和其他信息
+
 我们会把操作系统写在括号里
     
     Apache/1/3/26(Unix)
@@ -339,7 +354,7 @@ intitle:index.of index.php.bak
 
 inurl:index.php.bak
 
-![此处输入图片的描述][11]
+![此处输入图片的描述][14]
 
 
 **注意：**
@@ -363,7 +378,7 @@ google 并不会搜索文档的元数据或者叫做域值（就是文件内部�
 
 filetype:conf inurl:firewall
 
-![此处输入图片的描述][12]
+![此处输入图片的描述][15]
 
 **注意：**
 
@@ -404,7 +419,7 @@ ext:log log
 
 filetype:log username putty
 
-![此处输入图片的描述][13]
+![此处输入图片的描述][16]
 
 **三、office文档**
 
@@ -414,7 +429,7 @@ filetype:xls inurl:password.xls
 
 filetype:xls username password email
 
-![此处输入图片的描述][14]
+![此处输入图片的描述][17]
 
 ### 五、数据库挖掘
 
@@ -426,7 +441,7 @@ filetype:xls username password email
 
 大的厂商一般会把版权的注意事项放在页面的底部
 
-![此处输入图片的描述][15]
+![此处输入图片的描述][18]
 
 **二、支持的文件**
 
@@ -437,7 +452,6 @@ filetype:xls username password email
 **三、错误消息**
 
 数据库的错误消息能够用来分析操作系统和web服务器的版本
-
 还可能更多
 
 SQL command not properly ended 
@@ -462,7 +476,7 @@ SQL command not properly ended
 
 filetype:sql sql 
 
-![此处输入图片的描述][16]
+![此处输入图片的描述][19]
 
 **五、真实的数据库文件**
 
@@ -471,7 +485,7 @@ filetype:sql sql
 **实例：**
 filetype:mdb inurl:com
 
-![此处输入图片的描述][17]
+![此处输入图片的描述][20]
 
 ## 0X4谷歌在一个信息收集框架中的身影
 
@@ -499,29 +513,19 @@ filetype:mdb inurl:com
 **1.Email地址：**
 
 很多网站都会尝试模糊处理email来欺骗数据挖掘程序，因为很多的垃圾邮件的发送者会通过数据挖掘程序来收集email地址。
-
 当然我们有办法解决
 
 email 地址可以扩展，比如：
    
-  
-   qazwsx@k0rz3n.com
-   
-   qazwsx at k0rz3n.com
-   
-   qazwsx at k0rz3n dot com
-    
-   qazwsx@k0rz3n dot com
-   
-   qazwsx_at_k0rz3n.com
-  
-   qazwsx_at_k0rz3n dot com
-   
-   qazwsx_at_k0rz3n_dot_com
-  
-   qazwsx@k0rz3n.remove.com
-  
-   qazwsx@_removethis_k0rz3n.com
+    qazwsx@k0rz3n.com
+    qazwsx at k0rz3n.com
+    qazwsx at k0rz3n dot com
+    qazwsx@k0rz3n dot com
+    qazwsx_at_k0rz3n.com
+    qazwsx_at_k0rz3n dot com
+    qazwsx_at_k0rz3n_dot_com
+    qazwsx@k0rz3n.remove.com
+    qazwsx@_removethis_k0rz3n.com
 
 **注意：**
 
@@ -542,6 +546,7 @@ email地址是有格式的，但是电话号码没有
 在一定的范围内查找结果中包含电话号码的有趣的地方是，你可以使用google 的numrange运算符，最好的方法就是指定起始数字然后在数字最后带上..（..是numberange的简写形式）
 
 **例如：**
+
 252793..9999
 
 **3.人**
@@ -570,7 +575,7 @@ site:xxxx.gov -www.xxxx.gov
 
 相当于查询子域名
 
-![此处输入图片的描述][18]
+![此处输入图片的描述][21]
 
 我们可以给每个查询添加一些通用的额外关键字
 
@@ -590,6 +595,7 @@ about offical page site等
 扩展名有时候能使用布尔运算符再次组合起来
 
 **实例：**
+
 filetype:ppt or filetype:doc site:xxxx.gov
 
 **四、从数据源获取数据**
@@ -664,6 +670,7 @@ inurl:exploits
 
 **实例：**
 
+
 filetype:c exploit
 
 使用下面的命令把这些网站从转储的google结果页面中隔离出来
@@ -730,13 +737,13 @@ login trouble 也是很有价值的
 
 有很多的方法能从目标系统获取用户名，即使用户名是大多数认证机制中不太重要的部分
 
-![此处输入图片的描述][19]
+![此处输入图片的描述][22]
 
 **六、password|passcode|"your password is" reminder forgotten**
 
 某些情况下，这种查询与site结合会找到提供创建密码策略信息的帮助页面，这对后面的密码的猜解提供了巨大的帮助
 
-![此处输入图片的描述][20]
+![此处输入图片的描述][23]
 
 **七、admin|administrator**
 
@@ -744,7 +751,7 @@ login trouble 也是很有价值的
 
 返回的结果可能会涉及本地、公司、网站、部门、服务器、系统、网络、数据库、email 等
 
-![此处输入图片的描述][21]
+![此处输入图片的描述][24]
 
 **实例：**
 
@@ -752,7 +759,7 @@ login trouble 也是很有价值的
 
 很容易就能找到登录的界面
 
-![此处输入图片的描述][22]
+![此处输入图片的描述][25]
 
 **注意：**
 
@@ -851,7 +858,8 @@ grep -h -r "Content-language:en" * -A 10|grep -A5 "TITLE"|grep -v virtual
 
 **3.默认页面**
 
-另一个查找特定类型的服务器或者web软件的方法就是搜索默认的web页面，大多数的web软件或者是服务器自身都带有一页或者是更多页的web页面，这些页面使得网站管理员很容易地测试一个web服务器或者是应用的安装情况。
+另一个查找特定类型的服务器或者web软件的方法就是搜索默认的web页面，大多数的web软件或者是服务器自身都带有一页或者是更多页的web页面，这些页面使得网站管
+理员很容易地测试一个web服务器或者是应用的安装情况。
 
 在网站的早期，也就是默认页面还存在的时候谷歌就抓取到信息，导致实时显示的页面与缓存页面有不同。
 
@@ -880,9 +888,7 @@ NQT程序也接受POST请求，我们可以向服务器传递参数，服务器�
 ### 四、定位开启的网络设备
 
 谷歌也能用来探测很多开启web的网络设备，很多设备都装有网络界面使得管理员能远程控制，但是只要是被Google抓取过得页面都会存在于网络映射中】
-
 intitle:"BorderManager alert" 就能泄露代理防火墙服务器的存在，
-
 
 如果这台设备是一个代理服务器的话，攻击者就能利用这台主机获得可信网络的访问权限
 
@@ -925,6 +931,7 @@ intitle:index.of install.log
 filetype:log nurl:install.log
 
 二、搜索密码：
+
 大多数在google上发现的密码都是别被加密的，但是大多数情况下还是能找到破解办法，比如 http://www.openwall.com/John 的 John the Ripper ,强大的密码破解网站
 
 **实例：**
@@ -960,9 +967,7 @@ This file was generated by Nessus
 
 ### 二、谷歌快讯
 
-我们需要经常追踪谷歌结果集的变化，比如说我们要监控某网站的漏洞，我们其实不需要扫描器，我们只要建立一个cron 任务就能监控google的返回结果并且在检测到
-
-变化的时候把结果发邮件通知我们。而谷歌快讯就是一个能检测到结果集变化的强大系统
+我们需要经常追踪谷歌结果集的变化，比如说我们要监控某网站的漏洞，我们其实不需要扫描器，我们只要建立一个cron 任务就能监控google的返回结果并且在检测到变化的时候把结果发邮件通知我们。而谷歌快讯就是一个能检测到结果集变化的强大系统
 
 ### 三、google自定义搜索引擎
 
@@ -1037,24 +1042,27 @@ This file was generated by Nessus
 
 
   [1]: http://omjtvvl8z.bkt.clouddn.com/TP1.png
-  [2]: http://omjtvvl8z.bkt.clouddn.com/DQ1.png
-  [3]: http://omjtvvl8z.bkt.clouddn.com/LT1.png
-  [4]: http://omjtvvl8z.bkt.clouddn.com/RL1.png
-  [5]: http://omjtvvl8z.bkt.clouddn.com/DT1.png
-  [6]: http://omjtvvl8z.bkt.clouddn.com/GJ.png
-  [7]: http://omjtvvl8z.bkt.clouddn.com/ZDY1.png
-  [8]: http://omjtvvl8z.bkt.clouddn.com/GHDB1.png
-  [9]: http://omjtvvl8z.bkt.clouddn.com/MLLB1.png
-  [10]: http://omjtvvl8z.bkt.clouddn.com/MLLB2.png
-  [11]: http://omjtvvl8z.bkt.clouddn.com/MLLB3.png
-  [12]: http://omjtvvl8z.bkt.clouddn.com/MLLB4.png
-  [13]: http://omjtvvl8z.bkt.clouddn.com/MLLB5.png
-  [14]: http://omjtvvl8z.bkt.clouddn.com/YHMMA1.png
-  [15]: http://omjtvvl8z.bkt.clouddn.com/DL1.png
-  [16]: http://omjtvvl8z.bkt.clouddn.com/SJK1.png
-  [17]: http://omjtvvl8z.bkt.clouddn.com/SJK2.png
-  [18]: http://omjtvvl8z.bkt.clouddn.com/ZYM1.png
-  [19]: http://omjtvvl8z.bkt.clouddn.com/DLCW.png
-  [20]: http://omjtvvl8z.bkt.clouddn.com/CZMM1.png
-  [21]: http://omjtvvl8z.bkt.clouddn.com/DLQX.png
-  [22]: http://omjtvvl8z.bkt.clouddn.com/DLJM1.png
+  [2]: http://omjtvvl8z.bkt.clouddn.com/TP2.png
+  [3]: http://omjtvvl8z.bkt.clouddn.com/DQ1.png
+  [4]: http://omjtvvl8z.bkt.clouddn.com/DQ2.png
+  [5]: http://omjtvvl8z.bkt.clouddn.com/LT1.png
+  [6]: http://omjtvvl8z.bkt.clouddn.com/RL1.png
+  [7]: http://omjtvvl8z.bkt.clouddn.com/RL3.png
+  [8]: http://omjtvvl8z.bkt.clouddn.com/DT1.png
+  [9]: http://omjtvvl8z.bkt.clouddn.com/GJ.png
+  [10]: http://omjtvvl8z.bkt.clouddn.com/ZDY1.png
+  [11]: http://omjtvvl8z.bkt.clouddn.com/GHDB1.png
+  [12]: http://omjtvvl8z.bkt.clouddn.com/MLLB1.png
+  [13]: http://omjtvvl8z.bkt.clouddn.com/MLLB2.png
+  [14]: http://omjtvvl8z.bkt.clouddn.com/MLLB3.png
+  [15]: http://omjtvvl8z.bkt.clouddn.com/MLLB4.png
+  [16]: http://omjtvvl8z.bkt.clouddn.com/MLLB5.png
+  [17]: http://omjtvvl8z.bkt.clouddn.com/YHMMA1.png
+  [18]: http://omjtvvl8z.bkt.clouddn.com/DL1.png
+  [19]: http://omjtvvl8z.bkt.clouddn.com/SJK1.png
+  [20]: http://omjtvvl8z.bkt.clouddn.com/SJK2.png
+  [21]: http://omjtvvl8z.bkt.clouddn.com/ZYM1.png
+  [22]: http://omjtvvl8z.bkt.clouddn.com/DLCW.png
+  [23]: http://omjtvvl8z.bkt.clouddn.com/CZMM1.png
+  [24]: http://omjtvvl8z.bkt.clouddn.com/DLQX.png
+  [25]: http://omjtvvl8z.bkt.clouddn.com/DLJM1.png
