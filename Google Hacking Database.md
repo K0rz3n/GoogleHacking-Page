@@ -4,7 +4,7 @@
 ---
 通过我的上一篇文章，我们知道Google Hacking 的强大之处，也了解了hacker们能通过简单的搜索框在网络中出入于无形，但是你可能不知道，在他们背后还有一个强大的后盾，那就是Google Hacking Database（GHDB），这篇文章主要就是简单的介绍一下GHDB的使用
 
-##0X01 简介
+## 0X01 简介
 话不多说，先上链接
 https://www.exploit-db.com/google-hacking-database/
 
